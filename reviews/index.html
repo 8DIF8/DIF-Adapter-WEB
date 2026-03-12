@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>D I F — Отзывы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://grainy-gradients.vercel.app data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none';"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="stylesheet" href="../assets/main.css" />
+  </head>
+  <body class="page-root" data-page="reviews">
+    <div class="grid-bg"></div>
+    <div class="noise-layer"></div>
+    <div class="scanlines"></div>
+
+    <div class="container">
+      <header class="site-header">
+        <div class="logo-block">
+          <div class="logo-avatar">
+            <span>D I F</span>
+          </div>
+          <div class="logo-text">
+            <span class="logo-text-main">WHITEHAT ADAPTER</span>
+            <span class="logo-text-sub">offensive security • mid‑level</span>
+          </div>
+        </div>
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>анонимные отзывы</span>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html" class="nav-link">главная</a>
+          <a href="../price/" class="nav-link">прайс</a>
+          <a href="../reviews/" class="nav-link nav-link--active">отзывы</a>
+          <a href="../links/" class="nav-link">переходник</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <h1 class="section-title">отзывы о d i f</h1>
+              <p class="section-sub">
+                Всё хранится анонимно в браузере и не уезжает на серверы.
+              </p>
+            </div>
+            <span class="pill-small">localStorage only</span>
+          </div>
+
+          <div class="columns-2">
+            <section class="card">
+              <div class="card-header">
+                <h2 class="card-title">оставить отзыв</h2>
+                <span class="card-pill">анонимно</span>
+              </div>
+              <form class="form" data-review-form>
+                <label class="field-label" for="review-text">
+                  Текст отзыва
+                </label>
+                <textarea
+                  id="review-text"
+                  class="textarea"
+                  placeholder="Кратко: что понравилось, что зашло, за что респект / или что улучшить."
+                  data-review-text
+                ></textarea>
+                <div>
+                  <p class="field-label" style="margin-bottom: 0.25rem;">
+                    Оценка (обязательно)
+                  </p>
+                  <div class="stack-tags">
+                    <label class="tag">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="1"
+                        data-review-rating
+                        style="margin-right: 0.35rem;"
+                      />
+                      1 ★
+                    </label>
+                    <label class="tag">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="2"
+                        data-review-rating
+                        style="margin-right: 0.35rem;"
+                      />
+                      2 ★★
+                    </label>
+                    <label class="tag">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="3"
+                        data-review-rating
+                        style="margin-right: 0.35rem;"
+                      />
+                      3 ★★★
+                    </label>
+                    <label class="tag">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="4"
+                        data-review-rating
+                        style="margin-right: 0.35rem;"
+                      />
+                      4 ★★★★
+                    </label>
+                    <label class="tag tag--accent">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value="5"
+                        data-review-rating
+                        style="margin-right: 0.35rem;"
+                      />
+                      5 ★★★★★
+                    </label>
+                  </div>
+                </div>
+                <p class="helper-text" data-review-helper></p>
+                <p class="error-text" data-review-error></p>
+                <button type="submit" class="btn btn-primary">
+                  отправить отзыв
+                </button>
+              </form>
+            </section>
+
+            <section class="card">
+              <div class="card-header">
+                <h2 class="card-title">что уже написали</h2>
+                <span class="card-pill">public view</span>
+              </div>
+              <div class="reviews-list" data-reviews-list></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <p>© D I F — whitehat adapter. Спасибо за любую честную обратную связь.</p>
+    </footer>
+
+    <script src="../assets/reviews.js"></script>
+  </body>
+</html>
+
